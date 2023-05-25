@@ -28,17 +28,7 @@ DG.add_node(9, nom='Boateng')
 DG.add_node(10, nom='Schuerrle') #se agrego a Schuerrle en lugar de Krammer por que tuvo mayor tiempo de participacion en el partido
 
 #MDP- Matriz de Pases
-MDP=([0,7,4,4,3,0,3,11,3,5,3],
-     [2,0,8,6,3,1,2,0,13,2,18],
-     [6,9,0,7,2,2,3,7,9,11,0],
-     [4,9,8,0,13,1,8,15,23,9,7],
-     [0,3,0,16,0,1,6,13,15,5,3],
-     [0,0,0,0,1,6,2,1,2,0,0],
-     [0,1,0,3,7,2,0,16,9,3,3],
-     [1,0,2,23,24,6,12,0,7,23,1],
-     [0,12,8,17,10,1,8,11,0,3,19],
-     [9,3,10,13,8,0,5,22,6,0,1],
-     [0,7,4,3,7,0,5,3,17,1,0])
+MDP=([0,7,4,4,3,0,3,11,3,5,3],[2,0,8,6,3,1,2,0,13,2,18],[6,9,0,7,2,2,3,7,9,11,0],[4,9,8,0,13,1,8,15,23,9,7],[0,3,0,16,0,1,6,13,15,5,3],[0,0,0,0,1,6,2,1,2,0,0],[0,1,0,3,7,2,0,16,9,3,3],[1,0,2,23,24,6,12,0,7,23,1],[0,12,8,17,10,1,8,11,0,3,19],[9,3,10,13,8,0,5,22,6,0,1],[0,7,4,3,7,0,5,3,17,1,0])
 
 #empieza el rango desde cero ya que tiene que coincidir con el valor de la matriz
 for x in range (0,11):
@@ -50,10 +40,10 @@ for x in range (0,11):
           pass
 
 #DATOS EN GEXF PARA GePHI
-nx.write_gexf(DG,'ALEvsARG_FINAL.gexf')
+nx.write_gexf(DG,'AlemaniaP.gexf')
 
 
-'''
+
 G=nx.Graph(Equipo="Alemania Sin Peso")  #creacion de grafo
 
 #Nodos con nombre
@@ -74,7 +64,6 @@ for x in range (0,11):
       if MDP[x][y] == 0: 
           pass
       else:
-          G.add_edges_from([(x,y)])  #Creador de enlaces SIN peso
+          G.add_edges_from([(x,y)])  #Creador de enlaces con peso
       
 nx.write_gexf(G,'AlemaniaSP.gexf')
-'''

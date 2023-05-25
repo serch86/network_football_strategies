@@ -37,9 +37,9 @@ for x in range (0,11):
       else:
           pass
 
-nx.write_gexf(DG, "ARG_ALE_FINAL.gexf")
+nx.write_gexf(DG, "ArgentinaP.gexf")
 
-'''
+
 G=nx.Graph(Equipo="Argenitna Sin Peso")  #creacion de grafo
 #Nodos con nombre
 
@@ -64,4 +64,3 @@ for x in range (0,11):
           G.add_edges_from([(x,y)])  #Creador de enlaces con peso
 
 nx.write_gexf(G,'ArgentinaSP.gexf')
-'''
