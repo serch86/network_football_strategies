@@ -13,4 +13,4 @@ On Soccer Code you find all the scripts of every match analyzed in the project, 
 
 For more information you can contact me on
 serch86dam@ciencias.unam.mx
-Esp. Fis. Sergio Camposortega.
+M. en C. Sergio Camposortega.
